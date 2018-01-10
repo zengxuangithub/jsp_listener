@@ -1,25 +1,25 @@
 # jsp listener
 
-ÓÃÓÚ¼àÌıwebÓ¦ÓÃµÄÄÚ²¿ÊÂ¼ş
+ç”¨äºç›‘å¬webåº”ç”¨çš„å†…éƒ¨äº‹ä»¶
 
-##   ³£¼ûµÄwebÊÂ¼ş¼àÌı½Ó¿Ú
-     -  ServletContextListener   ¼àÌıwebµÄÆô¶¯ºÍ¹Ø±Õ  ×¢Òâ  ÕâÀïÊÇwebÓ¦ÓÃµÄÆô¶¯  ²»Í¬ÓÃ»§µÄ·ÃÎÊ  »òÕßÒ»¸öÓÃ»§µÄ¶à´Î·ÃÎÊ ²»»áµ÷ÓÃ¸ÃÊÂ¼ş  Ö»ÓĞµ±jsp µÚÒ»´Î±»±àÒë³ÉservletÊ± ²Å»á±»µ÷ÓÃ
+##   å¸¸è§çš„webäº‹ä»¶ç›‘å¬æ¥å£
+     -  ServletContextListener   ç›‘å¬webçš„å¯åŠ¨å’Œå…³é—­  æ³¨æ„  è¿™é‡Œæ˜¯webåº”ç”¨çš„å¯åŠ¨  ä¸åŒç”¨æˆ·çš„è®¿é—®  æˆ–è€…ä¸€ä¸ªç”¨æˆ·çš„å¤šæ¬¡è®¿é—® ä¸ä¼šè°ƒç”¨è¯¥äº‹ä»¶  åªæœ‰å½“jsp ç¬¬ä¸€æ¬¡è¢«ç¼–è¯‘æˆservletæ—¶ æ‰ä¼šè¢«è°ƒç”¨
 	 
-	 -  ServletContextAttributeListener ÓÃÓÚ¼àÌıservletContext·¶Î§ £¨application£©ÊôĞÔµÄ±ä»¯
+-  ServletContextAttributeListener ç”¨äºç›‘å¬servletContextèŒƒå›´ ï¼ˆapplicationï¼‰å±æ€§çš„å˜åŒ–
 	 
-	 -  ServletRequestListener    ÓÃÓÚ¼àÌıÓÃ»§ÇëÇó
+-  ServletRequestListener    ç”¨äºç›‘å¬ç”¨æˆ·è¯·æ±‚
 	 
-	 -  ServletRequestAttributeListener   ÓÃÓÚ¼àÌıservletRequest ÇëÇó·¶Î§ÄÚ  ÊôĞÔµÄ±ä»¯
+-  ServletRequestAttributeListener   ç”¨äºç›‘å¬servletRequest è¯·æ±‚èŒƒå›´å†…  å±æ€§çš„å˜åŒ–
 	 
-	 -   HttpSessionListener    ÓÃÓÚ¼àÌıÓÃ»§sessionµÄ¿ªÊ¼ºÍ½áÊø
+-   HttpSessionListener    ç”¨äºç›‘å¬ç”¨æˆ·sessionçš„å¼€å§‹å’Œç»“æŸ
 	 
-	 -   HttpSessionAttributeListener  ÓÃÓÚ¼àÌısession·¶Î§ÄÚÊôĞÔµÄ±ä»¯
+-   HttpSessionAttributeListener  ç”¨äºç›‘å¬sessionèŒƒå›´å†…å±æ€§çš„å˜åŒ–
 	 
-	 -   »¹ÓĞÆäËûµÄ¼àÌıÆ÷
+-   è¿˜æœ‰å…¶ä»–çš„ç›‘å¬å™¨
 
-##   ÓÃ·¨²½Öè
+##   ç”¨æ³•æ­¥éª¤
 
-1   ĞÂ½¨Ò»¸öÀà ²¢ÇÒ implements  ÏàÓ¦µÄ¼àÌı½Ó¿Ú  ÊµÏÖÏàÓ¦µÄ·½·¨
+1   æ–°å»ºä¸€ä¸ªç±» å¹¶ä¸” implements  ç›¸åº”çš„ç›‘å¬æ¥å£  å®ç°ç›¸åº”çš„æ–¹æ³•
 ```
 public class GetConnectionListener  implements ServletContextListener
 {
@@ -37,7 +37,7 @@ public class GetConnectionListener  implements ServletContextListener
 		  } catch (SQLException e)
 		  {
 			// TODO: handle exception
-			  System.out.println("Êı¾İ¿â¹Ø±ÕÊ§°Ü"+e.getMessage());
+			  System.out.println("æ•°æ®åº“å…³é—­å¤±è´¥"+e.getMessage());
 		  }	
 		}
 	}
@@ -45,7 +45,7 @@ public class GetConnectionListener  implements ServletContextListener
 	public void contextInitialized(ServletContextEvent event)
 	{
 		// TODO Auto-generated method stub
-		 System.out.println("Ó¦ÓÃ³õÊ¼»¯");
+		 System.out.println("åº”ç”¨åˆå§‹åŒ–");
 		String driver,url,user,pass;
 		ServletContext application;
 		try
@@ -67,7 +67,7 @@ public class GetConnectionListener  implements ServletContextListener
 		} catch (Exception e)
 		{
 			// TODO: handle exception
-			System.out.println("»ñÈ¡webÓ¦ÓÃ²ÎÊıÊ§°Ü"+e.toString());
+			System.out.println("è·å–webåº”ç”¨å‚æ•°å¤±è´¥"+e.toString());
 			return;
 		}
 		try 
@@ -78,10 +78,10 @@ public class GetConnectionListener  implements ServletContextListener
 		} catch (Exception e)
 		{
 			// TODO: handle exception
-			System.out.println("Êı¾İ¿âÁ´½ÓÒì³£"+e.toString());
+			System.out.println("æ•°æ®åº“é“¾æ¥å¼‚å¸¸"+e.toString());
 			return;
 		}
-		 System.out.println("³õÊ¼»¯½áÊø");
+		 System.out.println("åˆå§‹åŒ–ç»“æŸ");
 		
 	}
 
@@ -93,7 +93,7 @@ public class GetConnectionListener  implements ServletContextListener
 
 
 
-2  ÅäÖÃweb.xml  Ìí¼ÓÒ»¸ö¼àÌı½Úµã
+2  é…ç½®web.xml  æ·»åŠ ä¸€ä¸ªç›‘å¬èŠ‚ç‚¹
 
 ```
 	<listener>
