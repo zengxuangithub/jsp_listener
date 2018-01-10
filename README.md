@@ -3,7 +3,8 @@
 用于监听web应用的内部事件
 
 ##   常见的web事件监听接口
-     -  ServletContextListener   监听web的启动和关闭  注意  这里是web应用的启动  不同用户的访问  或者一个用户的多次访问 不会调用该事件  只有当jsp 第一次被编译成servlet时 才会被调用
+-  ServletContextListener   监听web的启动和关闭  
+   注意  这里是web应用的启动  不同用户的访问  或者一个用户的多次访问 不会调用该事件  只有当jsp 第一次被编译成servlet时 才会被调用
 	 
 -  ServletContextAttributeListener 用于监听servletContext范围 （application）属性的变化
 	 
